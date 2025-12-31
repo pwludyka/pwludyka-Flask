@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My favorite movies to watch</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Titles</h2>
+            <a href='/addMovie'>Add new movie</a>
+            <form method="POST" action="/">
+                {% for movie in movies %}
+                    <input type='checkbox' name='movieToRemove' value="{{movie[0]}}"> {{ movie[1] }}, {{ movie[2] }}, {{ movie[3] }}<br>
+                {% endfor %}
+            <button name="button" type="submit" ><i class="fa-solid fa-circle-plus"></i> Delete Movie</button>
+            </form>
+
+        </div>
+    </main>            
+<hr>
+    <footer>
+        <div class="container">
+            My movie database. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

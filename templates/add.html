@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My favorite movies to watch</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href='/'>Back to list of movies</a>
+            <h2>Add movie</h2>
+            <form method="POST" action="/addMovie">
+            Title: <input type="text" name="title"><br>
+            Year: <input type="text"  name="year"><br>
+            Actors: <input type="text"  name="actors"><br>
+            <button name="button" type="submit" ><i class="fa-solid fa-circle-plus"></i> Add</button>
+            </form>
+        </div>
+    </main>            
+<hr>
+    <footer>
+        <div class="container">
+            My movie database. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
